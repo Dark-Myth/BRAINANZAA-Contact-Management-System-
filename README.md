@@ -8,7 +8,7 @@ Users are presented with a menu offering options to add, view, search, edit, and
 
 Contacts are stored in a map data structure, allowing quick retrieval and manipulation. Each contact contains essential details such as first name, last name, address, phone number, and email address.
 
-Contact information is saved to a text file (contacts.txt) upon program exit and loaded back when the program starts, ensuring data persistence across sessions.
+Contact information is saved to a text file (contacts.csv) upon program exit and loaded back when the program starts, ensuring data persistence across sessions.
 
 Basic input validation is implemented to handle user errors, such as invalid menu choices or duplicate contact entries.
 
@@ -26,13 +26,13 @@ A map\<string, Contact\> is chosen to store the contacts. This data structure al
 
 The program provides a menu-driven interface to interact with users. Users are presented with a set of options and prompted to choose an action based on their requirements. The cin and cout functions are used to handle user input and output.
 
-The program utilizes file input/output operations to persist contact information between program executions. Contacts are saved to a text file (contacts.txt) when the program exits and loaded from the file when the program starts. This ensures that contact data is retained across sessions.
+The program utilizes file input/output operations to persist contact information between program executions. Contacts are saved to a text file (contacts.csv) when the program exits and loaded from the file when the program starts. This ensures that contact data is retained across sessions.
 
 The core functionalities of adding, viewing, searching, editing, and deleting contacts are implemented as separate functions. These functions encapsulate the logic for performing each operation, promoting code modularity and maintainability.
 
 Basic input validation is incorporated to handle potential user errors. For example, the p program ensures that the user enters a valid menu option checks for duplicate contacts, and adds new contacts.
 
-E The code includes error handling mechanisms to gracefully handle scenarios such as file reading errors or contacts not found during editing or deletion operations. This ensures that the program behaves predictably even in unexpected situations.
+The code includes error-handling mechanisms to gracefully handle scenarios such as file reading errors or contacts not found during editing or deletion operations. This ensures that the program behaves predictably even in unexpected situations.
 
 The code is adequately documented with comments to explain the purpose and functionality of each section. This helps improve code readability and makes it easier for other developers to understand and maintain the codebase.
 
@@ -44,7 +44,7 @@ Each functionality is encapsulated within separate functions (addContacts(), vie
 
 The addContacts() function enables users to input contact details such as first name, last name, address, and contact number. It validates input, avoids spaces in names with multiple words, and checks for a maximum limit of 100 contacts. Contacts are appended to the 'contacts.csv' file.
 
-The viewContacts() function displays all stored contacts in a formatted manner by reading the data from the 'AddressBook.txt' file and presenting it in a tabulated format.
+The viewContacts() function displays all stored contacts in a formatted manner by reading the data from the 'contacts.csv' file and presenting it in a tabulated format.
 
 The searchContact() function allows users to search for specific contacts based on criteria like first name, last name, address, or contact number. It reads the 'contacts.csv' file, performs searches according to the user's choice, and displays matching entries.
 
